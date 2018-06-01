@@ -36,7 +36,8 @@ void printInOrder(Node* node)
 // TREE
 
 void init_tree(Tree* t){
-   
+   t->root = NULL;
+   t->size = NULL;
 }
 
 void clear_tree(Tree* t){
