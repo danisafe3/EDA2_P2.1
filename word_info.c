@@ -14,5 +14,7 @@ char* get_word(WordInfo* wi) {
 
 // Returns the word to be used for hashing
 void create_word_info(WordInfo* wi, char* word, char* definition, char pos) {
-
+    strncpy(wi->word, word, MAX_WORD_LENGTH);
+    strncpy(wi->definition, definition, MAX_DEFINITION_LENGTH);
+    wi->pos = pos;
 }
