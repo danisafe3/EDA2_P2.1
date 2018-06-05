@@ -9,7 +9,7 @@ void print_word_info(WordInfo wi) {
 
 // Returns the word to be used for hashing
 char* get_word(WordInfo* wi) {
-    return NULL;
+    return wi->word;
 }
 
 // Returns the word to be used for hashing
