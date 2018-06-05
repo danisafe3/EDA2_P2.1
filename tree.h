@@ -18,7 +18,7 @@
 
 
 typedef struct {
-Node* root;     //INACABADO(?)
+  Node* root;     //INACABADO(?)
 } Tree;
 
 void init_tree(Tree* t);
