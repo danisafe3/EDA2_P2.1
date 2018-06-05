@@ -12,7 +12,7 @@ typedef struct {
 
 struct nodes{
     WordInfo wi;
-    struct nodes *father;
+    struct nodes *father; //Se puede eliminar, no es necesario
     struct nodes *left_tree;
     struct nodes *right_tree;
 };
