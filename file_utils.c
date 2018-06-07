@@ -16,9 +16,9 @@
 
 #include "word_info.h"
 
-
 typedef struct {
-    
+    Node* root;
+    int size;
 } Tree;
 
 void init_tree(Tree* t);
