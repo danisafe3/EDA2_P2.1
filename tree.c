@@ -7,7 +7,7 @@
 
 
 // NODE
-/*
+
 void clearPostOrder(Node* node)
 { 
     
@@ -15,7 +15,11 @@ void clearPostOrder(Node* node)
 
 Node *createNode(WordInfo wi)
 {
-    return NULL;
+    Node *node  = (Node*)malloc(sizeof(Node)); 
+    strncpy(node->wi.word,wi.word,MAX_WORD_LENGTH);
+    strncpy(node->wi.definition,wi.definition,MAX_DEFINITION_LENGTH);
+    strcpy(node->wi.pos,wi.pos);
+    return node;
 }
 
 Node* insertNode(Node* node, WordInfo wi){
@@ -31,7 +35,7 @@ Node* findNode(Node* node, char* word)
 void printInOrder(Node* node)
 { 
 
-}*/
+}
 
 // TREE
 
