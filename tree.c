@@ -53,19 +53,23 @@ void insert_into_tree(Tree* t, WordInfo wi){
 }
 
 WordInfo* find_in_tree(Tree* t, char* word) {
-    WordInfo* aux = t->root->wi;
-    int x = strcmp(get_word(aux), word);
-    if (x == 0) {
-        return aux;
+    if (t->root == NULL) {
+        return NULL;
     } else {
-        Tree* aux_t;
-        init_tree(aux_t);
-        if (x > 0) {
-            aux_t->root = t->root->left_tree;
-        } else if (x > 0) {
-            aux_t->root = t->root->right_tree;
+        WordInfo* aux = t->root->wi;
+        int x = strcmp(get_word(aux), word);
+        if (x == 0) {
+            return aux;
+        } else {
+            Tree* aux_t;
+            init_tree(aux_t);
+            if (x < 0) {
+                aux_t->root = t->root->left_tree;
+            } else if (x > 0) {
+                aux_t->root = t->root->right_tree;
+            }
+            return (find_in_tree(aux_t, word));
         }
-        find_in_tree(aux_t, word);
     }
 }
 
