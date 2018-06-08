@@ -63,8 +63,13 @@ Node* findNode(Node* node, char* word) {
         return NULL;
 }
 
-void printInOrder(Node* node) {
-
+void printInOrder(Node* node)
+{ 
+    if (node->left_tree != NULL)
+        printInOrder(node->left_tree);
+    printWordInfo(node->wi);
+    if (node->right_tree != NULL)
+        printInOrder(node->right_tree);
 }
 
 // TREE
@@ -134,9 +139,8 @@ int size_tree(Tree* t) {
     return (t->size);
 }
 
-void print_tree(Tree* t) {
-
-     
-
+void print_tree(Tree* t){
+    printf("HOLA ESTE ES NUESTRO ARBOLO SALU2\n");
+    printInOrder(t->root);
 }
 
